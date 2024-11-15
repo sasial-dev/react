@@ -46,7 +46,7 @@ function isHook(node) {
  */
 
 function isComponentName(node) {
-  return node.type === 'Identifier' && /^[A-Z]/.test(node.name);
+  return node.type === 'Identifier' && (/^[A-Z]/.test(node.name) || node.name === "system");
 }
 
 function isReactFunction(node, functionName) {
